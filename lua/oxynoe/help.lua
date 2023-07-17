@@ -1,0 +1,16 @@
+function sendhelp()
+	print("telescope--")
+	print("pf: fuzzyfind")
+	print("control p: git file")
+	print("ps: grep line")
+	print("harpoon--")
+	print("a: add file, C-h: 1, C-t: 2, C-n: 3, C-s: 4")
+	print("fugitive: gs")
+	print("undo tree: u")
+	print("netrw: pv")
+	print("cmp: control p control n")
+	print("format: f")
+	print("terminal: <leader>1")
+	print("<leader>+ and <leader>- resize")
+end
+
