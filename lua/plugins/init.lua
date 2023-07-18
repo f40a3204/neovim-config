@@ -16,6 +16,7 @@ return {
 		    "nvim-lua/plenary.nvim",
 		},
 	},
+	'RRethy/vim-illuminate',
 	{
 		'ellisonleao/gruvbox.nvim',
 		lazy = false,
