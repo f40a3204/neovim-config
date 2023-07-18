@@ -1,8 +1,8 @@
 local cmp_action = require('lsp-zero').cmp_action()
+local lspkind = require('lspkind')
 
 
 require'cmp'.setup {
-	
   sources = {
     { name = 'path' },
     { name = 'nvim_lsp' },
@@ -31,5 +31,13 @@ cmp.setup({
   mapping = {
     ['<Tab>'] = cmp_action.tab_complete(),
     ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
-  }
+  },
+  view = {
+	  entries = 'custom'
+  },
+  formatting = {
+	format = lspkind.cmp_format(),
+       },
 })
+
+

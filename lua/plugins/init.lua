@@ -5,6 +5,10 @@ return {
 	},
 
 	'akinsho/bufferline.nvim',
+	{
+		'onsails/lspkind.nvim',
+		lazy = true
+	},
 
 	{
 		'ellisonleao/gruvbox.nvim',
