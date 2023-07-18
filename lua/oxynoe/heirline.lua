@@ -454,16 +454,12 @@ local Space = { provider = " " }
 ViMode = utils.surround({ " ", "" }, "#0c0c0c", { ViMode, Snippets })
 
 local StatusLine = {
-    ViMode, Space, WorkDir, Space, Git, Space, Diagnostics, Align,
+    ViMode, Space, WorkDir, Space, Space, Git, Space, Diagnostics, Align,
     Navic, Space, Align,
-    LSPActive, Space, FileType, Space, Space, Ruler, Space, ScrollBar, Space
+    LSPActive, Space, FileType, Space, FileNameBlock, Space, Ruler, Space, ScrollBar, Space
 }
 
-local WinBar = {
-	Space, FileNameBlock
-}
 
 require("heirline").setup({
 	statusline = StatusLine,
-	winbar = WinBar
 })
