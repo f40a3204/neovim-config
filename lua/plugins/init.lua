@@ -9,6 +9,14 @@ return {
 		'onsails/lspkind.nvim',
 		lazy = true
 	},
+	{
+	  "smjonas/inc-rename.nvim",
+	  lazy = false,
+	  cmd = "IncRename",
+	  config = function()
+	    require("inc_rename").setup()
+	  end,
+	},
 
 	{
 		"kdheepak/lazygit.nvim",
@@ -16,6 +24,9 @@ return {
 		    "nvim-lua/plenary.nvim",
 		},
 	},
+
+
+
 	'RRethy/vim-illuminate',
 	{
 		'ellisonleao/gruvbox.nvim',
@@ -48,6 +59,16 @@ return {
 		config = function ()
 			vim.g.tagbar_compact = 1
 		end
+	},
+	{
+		'VonHeikemen/searchbox.nvim',
+	  	dependencies = {
+			{'MunifTanjim/nui.nvim'}
+		},
+		lazy = true,
+		keys = {
+		      { "<leader>se", ":SearchBoxIncSearch<cr>", desc = "search" },
+	    	},
 	},
 
 	{
@@ -111,6 +132,13 @@ return {
 			require("nvim-autopairs").setup {}
 		end
 	},
+	{
+		"petertriho/nvim-scrollbar",
+		config = function()
+			require("scrollbar").setup()
+		end
+	},
+
 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -142,12 +170,17 @@ return {
 	'SmiteshP/nvim-navic',
 
 	{
-		'echasnovski/mini.nvim',
+	  	'gorbit99/codewindow.nvim',
+
 		lazy = true,
-		version = '*',
-	    	keys = {
-		      { "<leader>mm", "<cmd>lua MiniMap.toggle()<cr>", desc = "MiniMap" },
-	    	},
+		keys = {
+		      { "<leader>mm", "<cmd>lua require('codewindow').toggle_minimap()<cr>", desc = "NeoTree" },
+	},
+
+	  	config = function()
+	    		local codewindow = require('codewindow')
+	    		codewindow.setup()
+	  	end,
 	},
 
 	{

@@ -92,6 +92,7 @@ local FileNameBlock = {
     init = function(self)
         self.filename = vim.api.nvim_buf_get_name(0)
     end,
+    -- hl = { bg = "#605f58"}
 }
 -- We can now define some children separately and add them later
 
@@ -171,7 +172,7 @@ local Ruler = {
     -- %c = column number
     -- %P = percentage through file of displayed window
     provider = "%7(%l/%3L%):%2c %P",
-    hl = { fg = "#437e90", bg = "#161616" },
+    hl = { fg = "#437e90", bg = "#0c0c0c" },
 }
 
 local ScrollBar ={
@@ -186,7 +187,7 @@ local ScrollBar ={
         local i = math.floor((curr_line - 1) / lines * #self.sbar) + 1
         return string.rep(self.sbar[i], 2)
     end,
-    hl = { fg = "#437e90", bg = "#161616" },
+    hl = { fg = "#437e90", bg = "#0c0c0c" },
 }
 
 
@@ -453,12 +454,16 @@ local Space = { provider = " " }
 ViMode = utils.surround({ " ", "" }, "#0c0c0c", { ViMode, Snippets })
 
 local StatusLine = {
-    ViMode, Space, FileNameBlock, Space, Git, Space, Diagnostics, Align,
+    ViMode, Space, WorkDir, Space, Git, Space, Diagnostics, Align,
     Navic, Space, Align,
-    LSPActive, Space, FileType, Space, WorkDir, Space, Ruler, Space, ScrollBar, Space
+    LSPActive, Space, FileType, Space, Space, Ruler, Space, ScrollBar, Space
 }
 
+local WinBar = {
+	Space, FileNameBlock
+}
 
 require("heirline").setup({
 	statusline = StatusLine,
+	winbar = WinBar
 })
