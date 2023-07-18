@@ -11,6 +11,12 @@ return {
 	},
 
 	{
+		"kdheepak/lazygit.nvim",
+		dependencies = {
+		    "nvim-lua/plenary.nvim",
+		},
+	},
+	{
 		'ellisonleao/gruvbox.nvim',
 		lazy = false,
 		priority = 1000,
