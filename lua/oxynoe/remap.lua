@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>f", vim.cmd.Format)
+vim.keymap.set("n", "<leader>f", vim.cmd.Neoformat)
 vim.api.nvim_set_keymap('n', '<C-c>', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true })

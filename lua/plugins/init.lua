@@ -73,8 +73,9 @@ return {
 		lazy = false,
 	},
 	{
-		'mhartington/formatter.nvim',
-		cmd = "Format"
+		'sbdchd/neoformat',
+		lazy = true,
+		cmd = "Neoformat"
 	},
 	"lukas-reineke/indent-blankline.nvim",
 
