@@ -4,11 +4,14 @@ return {
 		lazy = false,
 	},
 
-	'akinsho/bufferline.nvim',
+	-- 'akinsho/bufferline.nvim',
 	{
 		'onsails/lspkind.nvim',
 		lazy = true
 	},
+
+	'nanozuki/tabby.nvim',
+
 	{
 	  "smjonas/inc-rename.nvim",
 	  lazy = false,
@@ -19,10 +22,22 @@ return {
 	},
 
 	{
+	    	'nvim-telescope/telescope.nvim', branch = '0.1.x',
+	      	dependencies = { 'nvim-lua/plenary.nvim' }
+    	},
+
+	{
 		"kdheepak/lazygit.nvim",
 		dependencies = {
 		    "nvim-lua/plenary.nvim",
 		},
+	},
+
+	{
+	    	'goolord/alpha-nvim',
+	    	event = "VimEnter",
+	    	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	    	-- opts = { require'alpha.themes.startify'.config }
 	},
 
 
@@ -117,14 +132,6 @@ return {
 
 	'quangnguyen30192/cmp-nvim-ultisnips',
 
-	{
-		"startup-nvim/startup.nvim",
-		dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		config = function()
-			require"startup".setup()
-		end
-	},
-
 
 	{
 		"windwp/nvim-autopairs",
@@ -172,8 +179,28 @@ return {
 	},
 
 	{
+	  	'stevearc/aerial.nvim',
+	  	opts = {},
+	  	dependencies = {
+	     		"nvim-treesitter/nvim-treesitter",
+	     		"nvim-tree/nvim-web-devicons"
+	  	},
+	},
+
+	{
 		'rebelot/heirline.nvim',
 		lazy = false
+	},
+
+	{
+		'Exafunction/codeium.vim',
+		  config = function ()
+
+		    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+		    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+		    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+		    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+	  end
 	},
 
 	'NvChad/nvterm',
