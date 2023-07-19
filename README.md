@@ -8,7 +8,7 @@ do :lua Sendhelp(),
 prints all the keybinds I have set.
 Please remind me if I left something out.
 
-##dependency? 
+## dependency? 
 
 Every dependency is optional.
 lazygit for lazygit
