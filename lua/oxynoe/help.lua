@@ -36,6 +36,7 @@ function Sendhelp()
 	print("neotree: <spcae>nt")
 	print("searchbox: <space>se")
 	print("leap: S<search item>, s<search item>")
+	print("nnn: <spcae>nn")
 
 	print("--misc commands--")
 	print("colorutils: :Colorutils")

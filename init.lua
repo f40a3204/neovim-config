@@ -1,13 +1,6 @@
 vim.wo.relativenumber = true
 vim.wo.number = true
 
-
-if vim.g.neovide then
-	vim.o.guifont = "Hack Nerd Font:h14"
-	vim.g.neovide_curser_trail_size = 0.2
-	vim.g.neovide_transparency = 1
-end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
