@@ -130,7 +130,7 @@ return {
 
 	'SirVer/ultisnips',
 
-	'quangnguyen30192/cmp-nvim-ultisnips',
+	'quangnguyen30192/cmp-nvim-ultisnips', -- why do I have 2 snippets plugin
 
 
 	{
