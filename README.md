@@ -4,7 +4,7 @@ My own neovim config.
 
 ## keybind?
 
-do :lua Sendhelp(),
+do :lua Help(),
 
 prints all the keybinds I have set.
 
