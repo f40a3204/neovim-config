@@ -17,6 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
+vim.api.nvim_exec([[
+	au BufEnter * setlocal cursorline
+	au BufLeave * setlocal nocursorline
+]], false)
+
 require('lazy').setup('plugins')
 
 require("oxynoe")
