@@ -4,6 +4,13 @@ return {
 		lazy = false,
 	},
 
+	{
+		'sindrets/winshift.nvim',
+		cmd = "WinShift",
+		lazy = true
+
+	},
+
 	-- 'akinsho/bufferline.nvim',
 	{
 		'onsails/lspkind.nvim',
@@ -36,7 +43,13 @@ return {
 	    require("inc_rename").setup()
 	  end,
 	},
-
+	{
+		'https://gitlab.com/yorickpeterse/nvim-window.git',
+		lazy = true,
+		keys = {
+			{ '<leader>w', "<cmd>lua require('nvim-window')<cr>", desc = 'Window' },
+		}
+	},
 	{
 	    	'nvim-telescope/telescope.nvim', branch = '0.1.x',
 	      	dependencies = { 'nvim-lua/plenary.nvim' }
