@@ -49,5 +49,6 @@ function Sendhelp()
 
 	print("--misc commands--")
 	print("colorutils: :Colorutils")
+	print("rename this object: :IncRename")
 end
 
