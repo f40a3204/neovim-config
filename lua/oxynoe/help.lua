@@ -1,4 +1,4 @@
-function Sendhelp()
+function Help()
 	print("--telescope--")
 	print("<space>pf: fuzzyfind")
 	print("control p: git file")
@@ -46,6 +46,7 @@ function Sendhelp()
 	print("searchbox: <space>se")
 	print("leap: S<search item>, s<search item>")
 	print("nnn: <spcae>nn")
+	print("trouble: <space>xx")
 
 	print("--misc commands--")
 	print("colorutils: :Colorutils")
