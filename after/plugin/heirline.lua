@@ -434,29 +434,17 @@ local FileType = {
 }
 
 
-local Snippets = {
-    -- check that we are in insert or select mode
-    condition = function()
-        return vim.tbl_contains({'s', 'i'}, vim.fn.mode())
-    end,
-    provider = function()
-        local forward = (vim.fn["UltiSnips#CanJumpForwards"]() == 1) and "" or ""
-        local backward = (vim.fn["UltiSnips#CanJumpBackwards"]() == 1) and " " or ""
-        return backward .. forward
-    end,
-    hl = { fg = "#8a677b", bg = "#0c0c0c", bold = true },
- }
 
 local Align = { provider = "%=" }
 local Space = { provider = " " }
 
 
-ViMode = utils.surround({ " ", "" }, "#0c0c0c", { ViMode, Snippets })
+ViMode = utils.surround({ " ", "" }, "#0c0c0c", { ViMode })
 
 local StatusLine = {
-    ViMode, Space, WorkDir, Space, Space, Git, Space, Diagnostics, Align,
+    ViMode, Space, FileNameBlock, Space, Space, Git, Space, Diagnostics, Align,
     Navic, Space, Align,
-    LSPActive, Space, FileType, Space, FileNameBlock, Space, Ruler, Space, ScrollBar, Space
+    LSPActive, Space, FileType, Space, WorkDir, Space, Ruler, Space, ScrollBar, Space
 }
 
 

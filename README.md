@@ -1,4 +1,4 @@
-# what is this?
+ what is this?
 
 My own neovim config.
 

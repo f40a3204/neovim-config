@@ -1,15 +1,7 @@
 return {
-	{
-		'prichrd/netrw.nvim',
-		lazy = false,
-	},
 
-	{
-		'sindrets/winshift.nvim',
-		cmd = "WinShift",
-		lazy = true
 
-	},
+
 
 	-- 'akinsho/bufferline.nvim',
 	{
@@ -17,50 +9,21 @@ return {
 		lazy = true
 	},
 
-	{
-		'luukvbaal/nnn.nvim',
-		config = function() require('nnn').setup() end,
-		lazy = true,
-		keys = {
-			{ '<leader>nn', '<cmd>NnnExplorer<cr>', desc = 'nnn' },
-		}
-	},
 
-	{
-	 "folke/trouble.nvim",
-	 dependencies = { "nvim-tree/nvim-web-devicons" },
-	 opts = {
-	 },
-	},
+
 
 	'nanozuki/tabby.nvim',
 
 	{
 	  "smjonas/inc-rename.nvim",
-	  lazy = false,
+	  lazy = true,
 	  cmd = "IncRename",
 	  config = function()
 	    require("inc_rename").setup()
 	  end,
 	},
-	{
-		'https://gitlab.com/yorickpeterse/nvim-window.git',
-		lazy = true,
-		keys = {
-			{ '<leader>w', "<cmd>lua require('nvim-window')<cr>", desc = 'Window' },
-		}
-	},
-	{
-	    	'nvim-telescope/telescope.nvim', branch = '0.1.x',
-	      	dependencies = { 'nvim-lua/plenary.nvim' }
-    	},
 
-	{
-		"kdheepak/lazygit.nvim",
-		dependencies = {
-		    "nvim-lua/plenary.nvim",
-		},
-	},
+
 
 	{
 	    	'goolord/alpha-nvim',
@@ -71,7 +34,6 @@ return {
 
 
 
-	'RRethy/vim-illuminate',
 	{
 		'ellisonleao/gruvbox.nvim',
 		lazy = false,
@@ -89,11 +51,7 @@ return {
 		end,
 	},
 
-	{
-		'nvim-treesitter/nvim-treesitter',
-		build = ':TSUpdate',
-		lazy = false
-	},
+
 
 	{
 		'preservim/tagbar',
@@ -121,17 +79,6 @@ return {
 	},
 
 	{
-		'ThePrimeagen/harpoon',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
-	'mbbill/undotree',
-	{
-		'tpope/vim-fugitive',
-		lazy = true,
-		cmd = "Git"
-	},
-
-	{
 		'nvim-tree/nvim-web-devicons',
 		lazy = true
 	},
@@ -140,34 +87,8 @@ return {
 	'hrsh7th/cmp-path',
 	'hrsh7th/cmp-nvim-lsp',
 	'tpope/vim-repeat',
-	{
-		'ggandor/leap.nvim',
-		lazy = false,
-	},
-	{
-		'sbdchd/neoformat',
-		lazy = true,
-		cmd = "Neoformat"
-	},
-	"lukas-reineke/indent-blankline.nvim",
-
-	{
-		'ThePrimeagen/vim-be-good',
-		lazy = true,
-		cmd = "VimBeGood"
-	},
-
-	'SirVer/ultisnips',
-
-	'quangnguyen30192/cmp-nvim-ultisnips', -- why do I have 2 snippets plugin
 
 
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup {}
-		end
-	},
 	{
 		"petertriho/nvim-scrollbar",
 		config = function()
@@ -176,65 +97,20 @@ return {
 	},
 
 
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-	    	branch = "v3.x",
-	    	cmd = "Neotree",
-	    	keys = {
-		      { "<leader>pn", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
-	    	},
-	    	config = function()
-			require("neo-tree").setup({
-				source_selector = {
-				winbar = true,
-				statusline = true
-			}
-			})
-		end,
-	    	dependencies = {
-	      		"MunifTanjim/nui.nvim",
-	    	}
-	},
 
     	"rcarriga/nvim-notify",
 
-	{
-	  "max397574/colortils.nvim",
-	  cmd = "Colortils",
-	  lazy = true,
-	  config = function()
-	    require("colortils").setup()
-	  end,
-	},
 
-	{
-	  	'stevearc/aerial.nvim',
-	  	opts = {},
-	  	dependencies = {
-	     		"nvim-treesitter/nvim-treesitter",
-	     		"nvim-tree/nvim-web-devicons"
-	  	},
-	},
 
 	{
 		'rebelot/heirline.nvim',
 		lazy = false
 	},
 
-	{
-		'Exafunction/codeium.vim',
-		  config = function ()
-
-		    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-		    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-		    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-		    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-	  end
-	},
-
-	'NvChad/nvterm',
 
 	'SmiteshP/nvim-navic',
+
+
 
 	{
 	  	'gorbit99/codewindow.nvim',

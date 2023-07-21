@@ -1,5 +1,6 @@
 vim.wo.relativenumber = true
 vim.wo.number = true
+vim.g.netrw_banner = 0
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -25,3 +26,4 @@ vim.api.nvim_exec([[
 require('lazy').setup('plugins')
 
 require("oxynoe")
+
