@@ -23,17 +23,6 @@ return {
 	  end,
 	},
 
-
-
-	{
-	    	'goolord/alpha-nvim',
-	    	event = "VimEnter",
-	    	dependencies = { 'nvim-tree/nvim-web-devicons' },
-	    	-- opts = { require'alpha.themes.startify'.config }
-	},
-
-
-
 	{
 		'ellisonleao/gruvbox.nvim',
 		lazy = false,
@@ -83,10 +72,11 @@ return {
 		lazy = true
 	},
 
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-nvim-lsp',
-	'tpope/vim-repeat',
+
+	{
+		'tpope/vim-repeat',
+		lazy = true
+	},
 
 
 	{
@@ -126,26 +116,11 @@ return {
 	  	end,
 	},
 
+
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		dependencies = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			{
-				'williamboman/mason.nvim',
-				build = function()
-					pcall(vim.cmd, 'MasonUpdate')
-				end,
-			},
-			{'williamboman/mason-lspconfig.nvim'},
-
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
-		}
+		'lewis6991/gitsigns.nvim',
+		event = "BufEnter",
+		lazy = true
 	},
-
-	'lewis6991/gitsigns.nvim',
 
 }
