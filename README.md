@@ -19,3 +19,15 @@ lazygit for lazygit
 ripgrep for telescope
 
 nnn for nnn
+
+## autocomplete? 
+
+setup COQ by 
+
+installling python virtualenv
+
+and then do 
+
+```
+:COPdeps
+```

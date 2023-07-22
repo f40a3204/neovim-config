@@ -27,4 +27,3 @@ require('lazy').setup('plugins')
 
 require("oxynoe")
 
-
