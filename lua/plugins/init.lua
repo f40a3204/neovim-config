@@ -98,9 +98,6 @@ return {
 	},
 
 
-	'SmiteshP/nvim-navic',
-
-
 
 	{
 	  	'gorbit99/codewindow.nvim',
