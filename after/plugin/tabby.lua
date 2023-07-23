@@ -1,11 +1,11 @@
 local theme = {
   -- fill = 'TabLineFill', #c0412e
-  fill = { fg='#437e90', bg='#0c0c0c', style='italic' },
-  head = { fg='#db4230', bg='#0c0c0c', style='italic' },
-  current_tab = 'TabLineSel',
-  tab = { fg='#437e90', bg='#3c3836', style='italic' },
-  win = { fg='#a8aa28', bg='#3c3836', style='italic' },
-  tail = { fg='#db4230', bg='#0c0c0c', style='italic' },
+  fill = { fg='#437e90', bg='#282828', style='italic' },
+  head = { fg='#a6957f', bg='#282828', style='italic' },
+  current_tab = {fg = '#292828', bg = '#a89985'},
+  tab = { fg='#a6957f', bg='#504945', style='italic' },
+  win = { fg='#a6957f', bg='#504945', style='italic' },
+  tail = { fg='#a6957f', bg='#282828', style='italic' },
 }
 vim.o.showtabline = 2
 
