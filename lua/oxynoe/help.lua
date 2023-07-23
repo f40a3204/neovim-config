@@ -47,7 +47,16 @@ function Help()
 	print("<space>wl: list workspace folders")
 	print("<space>D: type definition")
 	print("<space>gr: type definition")
-	print("<space>rn: (inc)rename")
+	print("<space>rn: rename")
+
+	print("--debugger--")
+	print("<space>db: toggle breakpoint")
+	print("<space>dc: continue")
+	print("<space>di: step into")
+	print("<space>do: step over")
+	print("<space>dr: toggle repl")
+	print("<space>dt: terminate")
+	print("<space>du: toggle UI")
 
 	print("--single packages--")
 	print("esc: clear marks")
@@ -65,7 +74,6 @@ function Help()
 
 	print("--misc commands--")
 	print("colorutils: :Colorutils")
-	print("rename this object: :IncRename")
 	print("shift window: :WinShift")
 end
 
