@@ -34,6 +34,10 @@ function Help()
 	print("clear suggestion: control + x")
 	print("code window: <space>mm")
 
+	print("--LSP--")
+	print("<space>gd: goto definition")
+	print("<space>fx: code action")
+
 	print("--single packages--")
 	print("esc: clear marks")
 	print("fugitive: <spcae>gs")
