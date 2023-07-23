@@ -42,15 +42,19 @@ return {
 		"neovim/nvim-lspconfig",
 		event = "BufEnter",
 		lazy = true,
+		keys = {
+			{ "gd", "<cmd>lua vim.lsp.buf.definition()<CR>" },
+			{ "xf", "<cmd>lua vim.lsp.buf.code_action()<CR>" },
+		},
 		config = function()
 			local lspconfig = require('lspconfig')
-			vim.api.nvim_create_autocmd('LspAttach', {
-			  desc = 'LSP actions',
-			  callback = function(event)
-				vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-				vim.keymap.set("n", "fx", function() vim.lsp.buf.code_action() end, opts)
-			  end
-			})
+		--	vim.api.nvim_create_autocmd('LspAttach', {
+		--	  desc = 'LSP actions',
+		--	  callback = function(event)
+		--		vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+		--		vim.keymap.set("n", "fx", function() vim.lsp.buf.code_action() end, opts)
+		--	  end
+		--	})
 			require('mason-lspconfig').setup_handlers({
 				function(server_name)
 			    		lspconfig[server_name].setup({
